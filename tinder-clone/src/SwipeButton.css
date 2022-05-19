@@ -1,0 +1,37 @@
+.SwipeButton{
+    position: fixed;
+    display: flex;
+    justify-content: space-evenly;
+    bottom: 10vh;
+    width: 100%;
+
+}
+.SwipeButton .MuiIconButton-root{
+    background-color: white;
+    box-shadow: 0px 10px 53px 1px rgb(0, 0, 0,0.3) !important;
+}
+.ReplayIcon{
+  
+    color: rgb(100, 1, 198,0.9);
+}
+.closeIcon{
+    
+    color: rgb(2, 208, 98,0.3);
+}
+.StarRateIcon{
+    
+    color: rgb(2, 28, 218,0.8);
+}
+.FavoriteIcon{
+    
+    color: rgb(222, 28, 108,0.8);
+}
+.FlashIconIcon{
+  
+    color: rgb(255, 29, 198,0.7);
+}
+.replayButton{
+    background-color: white;
+    color: white;
+    border: 1px solid white;
+}
