@@ -25,6 +25,7 @@ function TinderCards() {
           
           axios.request(options).then(function (response) {
               console.log(response.data);
+              setData(response.data);
           }).catch(function (error) {
               console.error(error);
           });
