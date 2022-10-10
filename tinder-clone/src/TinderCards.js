@@ -7,19 +7,12 @@ function TinderCards() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    async function fetchData() {
-        const options = {
-            method: 'GET',
-            headers: {
-                'X-RapidAPI-Key': '4580762247mshb4a711a634972ffp17767bjsnadc23ee59733',
-                'X-RapidAPI-Host': 'opensea13.p.rapidapi.com'
-            }
-        };
-        
-        fetch('https://opensea13.p.rapidapi.com/assets?collection_slug=cryptopunks&order_direction=desc&limit=20&include_orders=false', options)
+    async function fetchData() {    
+        fetch('https://api.unsplash.com/search/photos?query='+"NFT"+'&per_page=30&client_id=SouHY7Uul-OxoMl3LL3c0NkxUtjIrKwf3tsGk1JaiVo')
             .then(response => response.json())
             .then(response => {console.log(response)
-                                setData(response)})
+                                // setData(response)
+                            })
             .catch(err => console.error(err));
     }
     fetchData();
