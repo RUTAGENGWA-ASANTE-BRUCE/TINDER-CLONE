@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import "./TinderCards.css";
 import TinderCard from "react-tinder-card";
-import axios from "./axios";
+import axios from "axios";
 function TinderCards() {
   const [data, setData] = useState([]);
 
