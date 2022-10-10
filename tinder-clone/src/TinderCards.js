@@ -10,25 +10,17 @@ function TinderCards() {
     async function fetchData() {
         const options = {
             method: 'GET',
-            url: 'https://opensea13.p.rapidapi.com/assets',
-            params: {
-              collection_slug: 'cryptopunks',
-              order_direction: 'desc',
-              limit: '20',
-              include_orders: 'false'
-            },
             headers: {
-              'X-RapidAPI-Key': '4580762247mshb4a711a634972ffp17767bjsnadc23ee59733',
-              'X-RapidAPI-Host': 'opensea13.p.rapidapi.com'
+                'X-RapidAPI-Key': '4580762247mshb4a711a634972ffp17767bjsnadc23ee59733',
+                'X-RapidAPI-Host': 'opensea13.p.rapidapi.com'
             }
-          };
-          
-          axios.request(options).then(function (response) {
-              console.log(response.data);
-              setData(response.data);
-          }).catch(function (error) {
-              console.error(error);
-          });
+        };
+        
+        fetch('https://opensea13.p.rapidapi.com/assets?collection_slug=cryptopunks&order_direction=desc&limit=20&include_orders=false', options)
+            .then(response => response.json())
+            .then(response => {console.log(response)
+                                setData(response)})
+            .catch(err => console.error(err));
     }
     fetchData();
   }, []);
