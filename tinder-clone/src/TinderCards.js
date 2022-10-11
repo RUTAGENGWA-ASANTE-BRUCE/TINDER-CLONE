@@ -8,7 +8,7 @@ function TinderCards() {
 
   useEffect(() => {
     async function fetchData() {    
-        fetch('https://api.unsplash.com/search/photos?query='+"NFT"+'&per_page=30&client_id=Ilhz-h8GYzT3vwj3FnR0kf49qEehObfNh5RVGkfEEbI')
+        fetch('https://api.unsplash.com/search/photos?client_id=Ilhz-h8GYzT3vwj3FnR0kf49qEehObfNh5RVGkfEEbI')
             .then(response => response.json())
             .then(response => {console.log(response)
                                 setData(response.results)
@@ -37,7 +37,7 @@ function TinderCards() {
               onCardLeftScreen={() => outOfFrame(single.id)}
             >
               <div
-                style={{ backgroundImage: `url( ${single.urls.full})` }}
+                style={{ backgroundImage: `url(${single.image})` }}
                 className="card"
               >
                 <h3 style={{ color: `red` }}>{single.user.name}</h3>
