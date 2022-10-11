@@ -8,7 +8,7 @@ function TinderCards() {
 
   useEffect(() => {
     async function fetchData() {    
-        fetch('https://api.unsplash.com/search/photos?client_id=Ilhz-h8GYzT3vwj3FnR0kf49qEehObfNh5RVGkfEEbI')
+        fetch('https://api.unsplash.com/search/photos?query='+"nba"+'&per_page=30&client_id=Ilhz-h8GYzT3vwj3FnR0kf49qEehObfNh5RVGkfEEbI')
             .then(response => response.json())
             .then(response => {console.log(response)
                                 setData(response.results)
